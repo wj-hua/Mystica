@@ -3,4 +3,10 @@
     <style name="ActivityTheme" parent="AppTheme">
         <item name="android:statusBarColor">@android:color/darker_gray</item>
     </style>
+    <style name="MainTheme" parent="AppTheme">
+        <item name="android:statusBarColor">?android:colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">?android:colorAccent</item>
+    </style>
 </resources>

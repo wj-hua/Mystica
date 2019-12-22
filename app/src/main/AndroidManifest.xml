@@ -14,27 +14,34 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
-        android:name="com.mob.MobApplication"
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_mystica"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_mystica_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CountryNumber"></activity>
-        <activity android:name=".UserRegisterSecond" />
+        <activity android:name=".CreatePasswordActivity"
+            android:theme="@style/MainTheme"></activity>
         <activity
-            android:name=".UserRegister"
-            android:theme="@style/ActivityTheme" />
-        <activity
-            android:name=".MainActivity"
-            android:theme="@style/ActivityTheme">
+            android:name=".PasswordActivity"
+            android:theme="@style/MainTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".CountryNumber"
+            android:theme="@style/ActivityTheme" />
+        <activity android:name=".UserRegisterSecond" />
+        <activity
+            android:name=".UserRegister"
+            android:theme="@style/ActivityTheme" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/ActivityTheme"></activity>
         <activity
             android:name="com.mob.tools.MobUIShell"
             android:configChanges="keyboardHidden|orientation|screenSize"
