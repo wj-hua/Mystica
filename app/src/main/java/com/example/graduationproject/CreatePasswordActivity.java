@@ -10,6 +10,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.example.graduationproject.greendao.Password;
 import com.example.graduationproject.greendao.PasswordDao;
+import com.lxj.xpopup.XPopup;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -48,7 +49,7 @@ public class CreatePasswordActivity extends AppCompatActivity {
         }
     }
 
-    @OnClick({R.id.bt_save_password})
+    @OnClick({R.id.bt_save_password, R.id.bt_create_password})
     public void onClick(View view){
         switch (view.getId()){
             case R.id.bt_save_password:
@@ -63,6 +64,11 @@ public class CreatePasswordActivity extends AppCompatActivity {
                 password.setPassword_password(password_password);
                 password.setPassword_note(password_note);
                 mPasswordDao.insert(password);
+                break;
+            case R.id.bt_create_password:
+                new XPopup.Builder(this)
+                        .asCustom(new XpopupTest(this))
+                        .show();
         }
     }
 }

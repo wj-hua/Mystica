@@ -12,14 +12,18 @@ public class MyApplication extends Application {
     private DaoMaster mDaoMaster;
     private DaoSession mDaoSession;
     public static MyApplication instances;
-    @Override    public void onCreate() {
+
+    @Override
+    public void onCreate() {
         super.onCreate();
         instances = this;
         setDatabase();
     }
-    public static MyApplication getInstances(){
+
+    public static MyApplication getInstances() {
         return instances;
     }
+
     /**
      * 设置greenDao
      * 通过 DaoMaster 的内部类 DevOpenHelper,创建一个名为person_db的数据库
@@ -32,12 +36,16 @@ public class MyApplication extends Application {
         mDaoMaster = new DaoMaster(db);
         mDaoSession = mDaoMaster.newSession();
     }
+
     //获取DaoSession
     public DaoSession getDaoSession() {
         return mDaoSession;
     }
+
     //获取db
     public SQLiteDatabase getDb() {
         return db;
     }
+
+
 }
